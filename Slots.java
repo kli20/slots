@@ -7,14 +7,20 @@ public class Slots
     public static void main (String[] args)
     {
         System.out.println("Spin to win a coupon! ");
+        // Generates 3 random numbers that will correspond with a slot
         int slot1 = (int) Math.round(Math.random() * 10);
         int slot2 = (int) Math.round(Math.random() * 10);
         int slot3 = (int) Math.round(Math.random() * 10);
 
         System.out.print("You spinned ");
         // Match slot number to a symbol
+        for (int i = 0; i < ; i++)
+        {
+            
+        }
         switch(slot1)
         {
+            case 0:
             case 1:
             case 2:
                 System.out.print("☆ ");
@@ -38,6 +44,7 @@ public class Slots
         }
         switch(slot2)
         {
+            case 0:
             case 1:
             case 2:
                 System.out.print("☆ ");
@@ -61,6 +68,7 @@ public class Slots
         }
         switch(slot3)
         {
+            case 0:
             case 1:
             case 2:
                 System.out.println("☆ ");
@@ -82,6 +90,7 @@ public class Slots
                 System.out.println("☽ ");
                 break;
         }
-
+    // count how many slots is a match (several numbers)
+    
     }
 }
