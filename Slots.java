@@ -15,12 +15,12 @@ public class Slots
         System.out.println("You spinned " + slot1 + " " + slot2 + " " + slot3);
 
         System.out.print("You spinned ");
-        // Match slot number to a symbol
 
         int symslot1 = 0;
         int symslot2 = 0;
         int symslot3 = 0;
 
+        // Match slot number to a symbol
         switch(slot1)
         {
             case 0:
@@ -109,14 +109,25 @@ public class Slots
                 break;
         }
 
-        System.out.println("Your symslot is " + symslot1 + " " + symslot2 + " " + symslot3);
+        // System.out.println("Your symslot is " + symslot1 + " " + symslot2 + " " + symslot3);
 
     // count how many slots have a match (several possible numbers)
-    // If no matches
-    // if (symslot1 == syms )
-    // If 2 match
 
+    // If 2 match
+    if (symslot1 == symslot2 || symslot1 == symslot3 || symslot2 == symslot3 )
+    {
+        System.out.println("Two of a kind.");
+    }
     // If 3 match (Jackpot)
+    else if (symslot1 == symslot2 && symslot2 == symslot3)
+    {
+        System.out.println("Jackpot winner!!");
+    }
+    else
+    {
+        System.out.println("No matches :(");
+    }
+
     // if slot1 = 0, 1, 2 MATCHES with slot2 = 0, 1, 2, MATCHES with slot3 = 0, 1, or 2
     }
 }
