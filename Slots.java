@@ -1,41 +1,46 @@
 // by Kate Li
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Slots
 {
     public static void main (String[] args)
     {
-        System.out.println("Spin to win a coupon! ");
-        // Generates 3 random numbers that will correspond with a slot
-        int slot1 = (int) Math.round(Math.random() * 10);
-        int slot2 = (int) Math.round(Math.random() * 10);
-        int slot3 = (int) Math.round(Math.random() * 10);
-
-        // Creates array for 3 slots
-        int[] symslot = new int[3];
-        symslot[0] = 0;
-        symslot[1] = 0;
-        symslot[2] = 0;
-
-        System.out.print("You spinned " + symbol(slot1, symslot, 0));
-        System.out.print(symbol(slot2, symslot, 1));
-        System.out.println(symbol(slot3, symslot, 2));
-
-        // If 2 match
-        if (symslot[0] == symslot[1] || symslot[0] == symslot[2] || symslot[1] == symslot[2] )
+        System.out.println("Spin to win a coupon! Y or N? ");
+        Scanner kb = new Scanner(System.in);
+        String decision = kb.nextLine();
+        if (decision.equals("Y"))
         {
-            System.out.println("Two of your symbols matched! Use code TWENTY for 20% off at https://preciousbykate.com. ");
-        }
-        // If 3 match (jackpot)
-        else if (symslot[0] == symslot[1] && symslot[1] == symslot[2])
-        {
-            System.out.println("Congrats, you're a jackpot winner!! Use code FIFTY for 50% off at https://preciousbykate.com.");
-        }
-        // If no matches
-        else
-        {
-            System.out.println("No matches, but no worries! Use code TEN for 10% off at https://preciousbykate.com. ");
+            // Generates 3 random numbers that will correspond with a slot
+            int slot1 = (int) Math.round(Math.random() * 10);
+            int slot2 = (int) Math.round(Math.random() * 10);
+            int slot3 = (int) Math.round(Math.random() * 10);
+
+            // Creates array for 3 slots
+            int[] symslot = new int[3];
+            symslot[0] = 0;
+            symslot[1] = 0;
+            symslot[2] = 0;
+
+            System.out.print("You spinned " + symbol(slot1, symslot, 0));
+            System.out.print(symbol(slot2, symslot, 1));
+            System.out.println(symbol(slot3, symslot, 2));
+
+            // If 2 match
+            if (symslot[0] == symslot[1] || symslot[0] == symslot[2] || symslot[1] == symslot[2] )
+            {
+                System.out.println("Two of your symbols matched! Use code TWENTY for 20% off at https://preciousbykate.com. ");
+            }
+            // If 3 match (jackpot)
+            else if (symslot[0] == symslot[1] && symslot[1] == symslot[2])
+            {
+                System.out.println("Congrats, you're a jackpot winner!! Use code FIFTY for 50% off at https://preciousbykate.com.");
+            }
+            // If no matches
+            else
+            {
+                System.out.println("No matches, but no worries! Use code TEN for 10% off at https://preciousbykate.com. ");
+            }
         }
     }
 

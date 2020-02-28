@@ -1,1 +1,9 @@
 // by Kate Li
+
+Product:
+This game allows the user to spin the slot machine to win a coupon. It uses Math.random to get 3 slots with an integer of 0-10. Then, I used a Method with a switch case to match printed symbols to certain numbers. Since 2 or 3 ints correspond with 1 symbol, I also created a variable “symslot” in the switch case that had a number representing the symbol. This made it easier for me to later check matching symbols. There are different coupon codes that correspond with different number of matches.
+
+Process:
+- When I was testing it, not all the symbols were printing out. Sometimes in the third slot, there would be no symbol but I wasn’t sure why. I decided to also print out the actual numbers that were being randomized so I could see if there was a certain number that had an issue linking with a symbol. I realized that there were some decimals from Math.random() that would become 0 when multiplied by 10 and as an integer. I had to add the zero to my switch case. I tried it again and now all symbols were printing properly.
+- I needed to code something to figure out if the symbols matched each other, but I was having issues typing out every possible number combo since each symbol represents several numbers, which created such a long list of combinations. I realized that I should make a new int variable to number each symbol. That way, I could compare less individual integers and it simplified the number of combinations I had to compare.
+- I had 3 separate switch cases for each slot, which was quite repetitive. Mr. Kiang helped me create an array and and Method to consolidate and streamline the process. It really helped to better my understanding with how variables get passed in the main versus the method.
